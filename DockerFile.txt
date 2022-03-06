@@ -1,0 +1,5 @@
+FROM openjdk:8u282-jre
+MAINTAINER Rachel Jacobsohn <rjacob24@depaul.edu>
+EXPOSE 8080
+COPY spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar /usr/local/tomcat/webapps
+ENTRYPOINT ["top", "-b"]
