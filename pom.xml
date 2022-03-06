@@ -282,7 +282,7 @@
         <executions>
         <execution>
         <id>copy-dependencies</id>
-        <phase>package</phase>
+        <phase>packacge</phase>
         <goals><goal>copy-dependencies</goal></goals>
         </execution>
         </executions>
