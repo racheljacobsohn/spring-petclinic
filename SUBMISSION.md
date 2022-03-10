@@ -1,35 +1,50 @@
-# Instructions
 Rachel Jacobsohn (1968440)
+SE441 – CD and Devops 
+Homework 8 
 
-Screen captures have been added to the figures directory.
+ Screen captures have been added to the "figures/HW8" directory.
 
-Your GitHub account showing that is has been forked from the depaulcdm/springpetclinic repository. This does not actually need an image. I can see it from your repository.
+DOCKER  
 
-![Forked Repo](figures/ForkedRepo.png)
+Your dockerfile. Please provide a link to this file rather than a screen capture.  
+https://github.com/racheljacobsohn/spring-petclinic/blob/master/DockerFile.txt 
 
-Your GitHub Actions dashboard showing a successful first build.
-![First Successful Build](figures/ActionsDasboardFirstSuccessfulBuild.png)
+FROM openjdk:8u282-jre 
+MAINTAINER Rachel Jacobsohn <rjacob24@depaul.edu> 
+EXPOSE 8080 
+COPY target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar / 
+ENTRYPOINT ["java","-jar","spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"] 
 
-Your GitHub repository with the readme.md file selected showing the code that you changed to update the badge.
-![Updated ReadMe With Badge](figures/ReadMeWithUpdatedBadge.png)
+Your running docker instance as shown by a ps command.  
+![docker ps](figures/HW8/Screenshot2.png)
 
-Your GitHub repository with the readme.md file selected showing the build success status after you have updated the badge markdown.
-![Build Success After Updating Badge](figures/BuildSuccessAfterUpdatingBadgeMarkdown.png)
+Your browser accessing the main page of the website from your local container. 
+![homepage part 1](figures/HW8/Screenshot3.png) 
 
-The section of the POM file showing the coordinates after you have commented them out.
-![Comment Out POM Coordinates](figures/CommentOutPomCoordinates.png)
+ 
+DOCKER COMPOSE - MYSQL ONLY  
 
-Your GitHub Actions dashboard showing the unsuccessful build after the breaking change.
-![Broken Build](figures/BrokenBuild.png)
+The output from the docker-compose up command.  
+ ![docker compose part 2](figures/HW8/Screenshot4.png) 
 
-Your GitHub repository with the readme.md file selected showing the build failed status after the GitHub workflow fails.
-![ReadMe With Failed Build](figures/ReadMeShowingBuildFailed.png)
+Your browser accessing the “Veterinarians” page of the website from your local container when you run the application from the host system.  
+ ![veterinarians page part 2](figures/HW8/Screenshot5.png)
 
-The section of the POM file showing the coordinates after you have fixed them.
-![Comment In POM Coordinates](figures/CommentInPomCoordinates.png)
+A section of the stack trace generated when you attempt to run the application container that has been updated to use MySQL 
+ ![run app part 2](figures/HW8/Screenshot6.png)
 
-Your GitHub Actions dashboard showing the successful build after the breaking change has been fixed.
-![Fixed Build](figures/FixedBuild.png)
+ 
+DOCKER COMPOSE - APP SERVER AND MYSQL  
 
-Your GitHub repository with the readme.md file selected showing the build success status after the GitHub workflow has recovered.
-![ReadMe Build Success After Recovery](figures/ReadMeBuildSuccessAfterRecovery.png)
+Your updated docker-compose.yml file containing the application server, built from your local Dockerfile, and the existing MySQL configuration. Please provide a link to this file rather than a screen capture.  
+https://github.com/racheljacobsohn/spring-petclinic/blob/master/docker-compose.yml 
+
+Your updated application-mysql.properties file containing the URL change for the database server. Please provide a link to this file rather than a screen capture.  
+https://github.com/racheljacobsohn/spring-petclinic/blob/master/src/main/resources/application-mysql.properties  
+
+The output from the docker-compose up command.  
+ ![docker compose part 3](figures/HW8/Screenshot9.png) 
+
+Your browser accessing the “Veterinarians” page of the website from your local container. 
+ ![veterinarians page part 3](figures/HW8/Screenshot10.png)
+ 
