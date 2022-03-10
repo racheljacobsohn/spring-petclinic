@@ -7,13 +7,7 @@ Homework 8
 DOCKER  
 
 Your dockerfile. Please provide a link to this file rather than a screen capture.  
-https://github.com/racheljacobsohn/spring-petclinic/blob/master/DockerFile.txt 
-
-FROM openjdk:8u282-jre 
-MAINTAINER Rachel Jacobsohn <rjacob24@depaul.edu> 
-EXPOSE 8080 
-COPY target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar / 
-ENTRYPOINT ["java","-jar","spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"] 
+https://github.com/racheljacobsohn/spring-petclinic/blob/master/Dockerfile 
 
 Your running docker instance as shown by a ps command.  
 ![docker ps](figures/HW8/Screenshot2.png)
